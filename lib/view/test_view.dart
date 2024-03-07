@@ -26,6 +26,7 @@ class TestViewState extends State<TestView> {
     myColors = Theme.of(context).extension<MyThemeColor>()!;
 
     return Scaffold(
+      backgroundColor: myColors.myColorBackground,
       appBar: myAppBar.titleAppbar('이것은 앱바 입니다.'),
       body: Center(
         child: Column(
