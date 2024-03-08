@@ -23,7 +23,7 @@ class MyDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Dialog(
-        backgroundColor: myColors.myColorGray700,
+        backgroundColor: myColors.myColorGray400,
         surfaceTintColor: Colors.transparent,
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -72,11 +72,11 @@ class MyDialog extends StatelessWidget {
         children: [
           (cancelMsg != null)
               ? dialogButton(cancelMsg, cancelFunction, true,
-                  myColors.myColorGray300!, const Color(0xff222222))
+                  myColors.myColorGray300!, Colors.white)
               : Container(),
           (confirmMsg != null)
               ? dialogButton(confirmMsg, confirmFunction, false,
-                  myColors.myColorGray300!, myColors.myColorBlue700!)
+                  myColors.myColorGreen500!, Colors.white)
               : Container(),
         ],
       ),
@@ -123,7 +123,7 @@ class MyDialog extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 14,
-                color: myColors.myColorGray300!
+                color: buttonTextColor
               )),
         ),
       ),

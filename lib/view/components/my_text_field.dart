@@ -19,7 +19,7 @@ class MyTextField {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style: TextStyle(fontSize: 16, color: myColors.myColorGray700)),
+        Text(title, style: TextStyle(fontSize: 16, color: myColors.myColorGray500)),
         const SizedBox(height: 10),
         Form(
             key: globalKey,
@@ -36,7 +36,7 @@ class MyTextField {
               }
                   : null,
               style: TextStyle(
-                  color: myColors.myColorGray700,
+                  color: myColors.myColorGray500,
                   fontSize: 16,
                   fontWeight: FontWeight.w400),
               decoration: InputDecoration(
@@ -47,11 +47,11 @@ class MyTextField {
                 hintText: hintText,
                 hintStyle: TextStyle(
                   fontSize: 16,
-                  color: myColors.myColorGray700
+                  color: myColors.myColorGray500
                 ),
                 errorStyle: TextStyle(
                   fontSize: 16,
-                  color: myColors.myColorGray700
+                  color: myColors.myColorGray500
                 ),
                 enabledBorder: InputBorder.none,
                 focusedBorder: InputBorder.none,
@@ -87,16 +87,16 @@ class MyTextField {
             return validator!(value);
           },
           style: TextStyle(
-              color: myColors.myColorGray700,
+              color: myColors.myColorGray500,
               fontSize: 16,
               fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             contentPadding: const EdgeInsetsDirectional.all(20),
             filled: true,
-            fillColor: myColors.myColorGray700,
+            fillColor: myColors.myColorGray500,
             hintText: hintText,
-            hintStyle: TextStyle(color: myColors.myColorGray700, fontSize: 16),
-            errorStyle: TextStyle(color: myColors.myColorRed700, fontSize: 16),
+            hintStyle: TextStyle(color: myColors.myColorGray500, fontSize: 16),
+            errorStyle: TextStyle(color: myColors.myErrorColor, fontSize: 16),
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             focusedErrorBorder: InputBorder.none,
