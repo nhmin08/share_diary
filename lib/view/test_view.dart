@@ -47,7 +47,15 @@ class TestViewState extends State<TestView> {
                 null,
                 false),
             const Spacer(),
-            myButton.gradientButton(72, true, () {}, '하단 버튼'),
+            myButton.gradientButton(72, true, () {
+              Get.dialog(MyDialog(
+                content: '다이얼로그',
+                cancelFunction: (){Get.back();},
+                cancelMsg: '취소',
+                confirmFunction: (){Get.back();},
+                confirmMsg: '확인',
+              ));
+            }, '하단 버튼'),
           ],
         ),
       ),

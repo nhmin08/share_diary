@@ -15,7 +15,7 @@ class MyAppBar {
             icon: Icon(
               Icons.close,
               size: 32,
-              color: myColors.myColorGray700,
+              color: myColors.myColorGray500,
             ))
       ],
       backgroundColor: Colors.transparent,
@@ -26,7 +26,7 @@ class MyAppBar {
   AppBar titleAppbar(String title) {
     return AppBar(
       title: Text(title,
-          style: TextStyle(color: myColors.myColorGray700, fontSize: 16)),
+          style: TextStyle(color: myColors.myColorGray500, fontSize: 16)),
       centerTitle: false,
       automaticallyImplyLeading: false,
       backgroundColor: Colors.transparent,
@@ -37,12 +37,12 @@ class MyAppBar {
   AppBar backArrowAppbar(String title) {
     return AppBar(
       title: Text(title,
-          style: TextStyle(color: myColors.myColorGray700, fontSize: 16)),
+          style: TextStyle(color: myColors.myColorGray500, fontSize: 16)),
       leading: IconButton(
         onPressed: () {
           Get.back();
         },
-        icon: Icon(Icons.arrow_back_ios, color: myColors.myColorGray700),
+        icon: Icon(Icons.arrow_back_ios, color: myColors.myColorGray500),
       ),
       centerTitle: false,
       automaticallyImplyLeading: false,
