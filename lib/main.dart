@@ -12,13 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //myColors = Theme.of(context).extension<MyThemeColor>()!;
     return GetMaterialApp(
-      title: 'Flutter test',
+      title: 'Share Diary',
       theme: MyTheme.lightTheme,
       darkTheme: MyTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: const TestView(),
+      home: const LoginView(),
     );
   }
 }
