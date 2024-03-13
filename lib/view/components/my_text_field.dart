@@ -93,10 +93,16 @@ class MyTextField {
           decoration: InputDecoration(
             contentPadding: const EdgeInsetsDirectional.all(20),
             filled: true,
-            fillColor: myColors.myColorGray500,
+            fillColor: myColors.myColorGray300,
             hintText: hintText,
-            hintStyle: TextStyle(color: myColors.myColorGray500, fontSize: 16),
-            errorStyle: TextStyle(color: myColors.myErrorColor, fontSize: 16),
+            hintStyle: TextStyle(
+                fontSize: 16,
+                color: myColors.myColorGray500
+            ),
+            errorStyle: TextStyle(
+                fontSize: 12,
+                color: myColors.myErrorColor
+            ),
             enabledBorder: InputBorder.none,
             focusedBorder: InputBorder.none,
             focusedErrorBorder: InputBorder.none,
