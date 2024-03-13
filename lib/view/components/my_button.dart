@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:share_diary/single_import.dart';
 
 class MyButton {
-  Widget normalButton(double width, double height, VoidCallback? buttonAction,
+  Widget normalButton(double width, double height, bool buttonEnable,VoidCallback? buttonAction,
       String buttonText) {
     return SizedBox(
         width: width,
         height: height,
         child: ElevatedButton(
-            onPressed: () {
+            onPressed: buttonEnable? () {
               buttonAction!();
-            },
+            } : null,
             style: ElevatedButton.styleFrom(
                 backgroundColor: myColors.myColorGreen500,
                 shape: RoundedRectangleBorder(

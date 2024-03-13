@@ -19,6 +19,24 @@ class LoginViewState extends State<LoginView> {
   LoginViewModel loginViewModel = Get.put(LoginViewModel());
 
   @override
+  void initState() {
+    loginViewModel.idTextController.addListener(() {
+      setState(() {});
+    });
+    loginViewModel.passwordTextController.addListener(() {
+      setState(() {});
+    });
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    loginViewModel.idTextController.removeListener(() {});
+    loginViewModel.passwordTextController.removeListener(() {});
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     myColors = Theme.of(context).extension<MyThemeColor>()!;
 
@@ -49,7 +67,13 @@ class LoginViewState extends State<LoginView> {
                 });
               }, Validator.passwordValidator, 'Input Password', null, true),
               const SizedBox(height: 30),
-              myButton.normalButton(double.infinity, 62, () {
+              myButton.normalButton(
+                  double.infinity,
+                  62,
+                  (loginViewModel.idTextController.text.isEmpty ||
+                          loginViewModel.passwordTextController.text.isEmpty)
+                      ? false
+                      : true, () {
                 loginViewModel.login();
               }, 'Login'),
               signUpButton(),
