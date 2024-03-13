@@ -31,7 +31,7 @@ class TestViewState extends State<TestView> {
       body: Center(
         child: Column(
           children: [
-            myButton.normalButton(100, 30, () {
+            myButton.normalButton(100, 30, true, () {
               Get.to(() => const TestTwoView());
             }, '버튼'),
             myTextField.titleTextField(
