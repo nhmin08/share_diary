@@ -9,8 +9,13 @@ export 'package:share_diary/view/test/test_two_view.dart';
 
 export 'package:share_diary/view/login_view.dart';
 
+export 'package:share_diary/view/home/home_view.dart';
+export 'package:share_diary/view/home/components/home_drawer.dart';
+
 //view model
 export 'package:share_diary/view_model/login_view_model.dart';
+
+export 'package:share_diary/view_model/home/home_view_model.dart';
 
 //model
 
