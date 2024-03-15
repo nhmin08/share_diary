@@ -50,4 +50,23 @@ class MyAppBar {
       elevation: 0,
     );
   }
+
+  AppBar hamburgerAppbar(){
+    // return AppBar(
+    //   leading: IconButton(
+    //     onPressed: () {
+    //       callback!();
+    //     },
+    //     icon: Icon(Icons.menu, color: myColors.myColorGray500),
+    //   ),
+    //   backgroundColor: Colors.transparent,
+    //   elevation: 0,
+    // );
+
+    return AppBar(
+      iconTheme: IconThemeData(color: myColors.myColorGray500),
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+    );
+  }
 }

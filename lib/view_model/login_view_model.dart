@@ -73,6 +73,9 @@ class LoginViewModel extends GetxController{
       //   }
       // }
       // return response;
+
+      //삭제 예정
+      Get.off(() => const HomeView());
     }else{
       return;
     }
