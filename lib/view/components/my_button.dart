@@ -2,22 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:share_diary/single_import.dart';
 
 class MyButton {
-  Widget normalButton(double width, double height, VoidCallback? buttonAction,
+  Widget normalButton(double width, double height, bool buttonEnable,VoidCallback? buttonAction,
       String buttonText) {
     return SizedBox(
         width: width,
         height: height,
         child: ElevatedButton(
-            onPressed: () {
+            onPressed: buttonEnable? () {
               buttonAction!();
-            },
+            } : null,
             style: ElevatedButton.styleFrom(
-                backgroundColor: myColors.myColorBlue600,
+                backgroundColor: myColors.myColorGreen500,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5.0))),
             child: Text(buttonText,
-                style: TextStyle(
-                    color: myColors.myColorGray200,
+                style: const TextStyle(
+                    color: Colors.white,
                     fontSize: 14,
                     fontWeight: FontWeight.w500))));
   }
@@ -34,10 +34,10 @@ class MyButton {
             height: 40,
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(5)),
-                border: Border.all(color: myColors.myColorBlue600!, width: 1)),
+                border: Border.all(color: myColors.myColorGreen500!, width: 1)),
             child: Text(buttonText,
                 style:
-                    TextStyle(fontSize: 14, color: myColors.myColorGray700))));
+                    TextStyle(fontSize: 14, color: myColors.myColorGray500))));
   }
 
   Widget gradientButton(double height, bool isAble, VoidCallback? buttonAction,
@@ -48,10 +48,10 @@ class MyButton {
         decoration: isAble
             ? BoxDecoration(
             gradient: LinearGradient(colors: [
-              myColors.myColorBlue700!,
-              myColors.myColorBlue300!
+              myColors.myColorGreen500!,
+              myColors.myColorGreen400!
             ]))
-            : BoxDecoration(color: myColors.myDisable),
+            : BoxDecoration(color: myColors.myColorGray300),
         child: MaterialButton(
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           onPressed: isAble
@@ -61,9 +61,9 @@ class MyButton {
               : null,
           child: Text(
             buttonText,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
-              color: myColors.myColorGray300
+              color: Colors.white
             ),
           ),
         ));
