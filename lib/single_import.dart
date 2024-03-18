@@ -11,11 +11,13 @@ export 'package:share_diary/view/login_view.dart';
 
 export 'package:share_diary/view/home/home_view.dart';
 export 'package:share_diary/view/home/components/home_drawer.dart';
+export 'package:share_diary/view/home/created_diaries/created_diaries_view.dart';
 
 //view model
 export 'package:share_diary/view_model/login_view_model.dart';
 
 export 'package:share_diary/view_model/home/home_view_model.dart';
+export 'package:share_diary/view_model/home/created_diaries/created_diaries_view_model.dart';
 
 //model
 
