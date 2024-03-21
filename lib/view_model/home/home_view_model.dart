@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:share_diary/single_import.dart';
 
 class HomeViewModel extends GetxController {
   RxInt selectedIndex = 0.obs;
 
   List<Widget> widgetOptions = <Widget>[
-    const Center(
-      child: Text('작성한 일기 보기'),
-    ),
+    const CreatedDiariesView(),
     const Center(
       child: Text('오늘의 일기 쓰기'),
     ),
